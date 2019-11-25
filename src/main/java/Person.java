@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Person {
 
     public enum Sex {
-        Male, Female
+        MALE, FEMALE
     }
 
     private String name;
