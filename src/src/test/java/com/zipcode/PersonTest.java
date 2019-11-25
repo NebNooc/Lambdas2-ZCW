@@ -1,5 +1,4 @@
-package java;
-
+package com.zipcode;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -30,11 +29,21 @@ public class PersonTest {
 
         String actual = person.printPerson(person);
         String expected =   "Name: Wolf\n" +
-                            "Birthday: 1200-2-29\n" +
+                            "Birthday: 1200-02-29\n" +
                             "Gender: MALE\n" +
                             "Email: theRealGrandma@gmail.com";
 
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getterTest() {
+        LocalDate date2 = LocalDate.of(2010, 7, 21);
+
+        Assert.assertEquals("Red", person2.getName());
+        Assert.assertEquals(date2, person2.getBirthday());
+        Assert.assertEquals(Person.Sex.FEMALE, person2.getGender());
+        Assert.assertEquals("red.riding@gmail.com", person2.getEmail());
     }
 
 }
