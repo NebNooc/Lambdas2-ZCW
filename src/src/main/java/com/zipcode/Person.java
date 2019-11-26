@@ -1,6 +1,7 @@
 package com.zipcode;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Person {
 
@@ -34,6 +35,10 @@ public class Person {
 
     public LocalDate getBirthday() {
         return birthday;
+    }
+
+    public Integer getAge(){
+        return Period.between(birthday, LocalDate.now()).getYears();
     }
 
     public void setGender(Sex gender) {
