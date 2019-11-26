@@ -58,10 +58,10 @@ public class Person {
     }
 
     public String printPerson(Person person) {
-        return  "Name: " + getName() + "\n" +
-                "Birthday: " + getBirthday() + "\n" +
-                "Gender: " + getGender() + "\n" +
-                "Email: " + getEmail();
+        return  "Name: " + person.getName() + "\n" +
+                "Birthday: " + person.getBirthday() + "\n" +
+                "Gender: " + person.getGender() + "\n" +
+                "Email: " + person.getEmail() + "\n\n";
     }
 
 }

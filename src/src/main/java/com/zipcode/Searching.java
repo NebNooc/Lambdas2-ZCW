@@ -6,26 +6,39 @@ public class Searching {
 
     public static String printPersonsOlderThan(List<Person> roster, int age) {
 
-        StringBuilder s = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         for (Person p : roster) {
             if (p.getAge() >= age) {
-                s.append(p.getName()).append("\n");
+                sb.append(p.printPerson(p));
             }
         }
-        return s.toString();
+        return sb.toString();
     }
 
     public static String printPersonsWithinAgeRange(
             List<Person> roster, int low, int high) {
 
-        StringBuilder s = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         for (Person p : roster) {
             if (low <= p.getAge() && p.getAge() < high) {
-                s.append(p).append("\n");
+                sb.append(p.printPerson(p));
             }
         }
-        return s.toString();
+        return sb.toString();
     }
+
+    public static String printPersons(
+            List<Person> roster, CheckPerson tester) {
+        StringBuilder sb = new StringBuilder();
+        for (Person p : roster) {
+            if (tester.test(p)) {
+                sb.append(p.printPerson(p));
+            }
+        }
+        return sb.toString();
+    }
+
+
 
 
 

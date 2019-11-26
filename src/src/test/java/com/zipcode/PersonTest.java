@@ -31,7 +31,7 @@ public class PersonTest {
         String expected =   "Name: Wolf\n" +
                             "Birthday: 1200-02-29\n" +
                             "Gender: MALE\n" +
-                            "Email: theRealGrandma@gmail.com";
+                            "Email: theRealGrandma@gmail.com\n\n";
 
         Assert.assertEquals(expected, actual);
     }

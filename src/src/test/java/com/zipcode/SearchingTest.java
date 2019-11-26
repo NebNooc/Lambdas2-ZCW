@@ -26,7 +26,10 @@ public class SearchingTest {
 
     @Test
     public void printPersonOlderThanTest() {
-        String expected = "Grandma\n";
+        String expected =   "Name: Grandma\n" +
+                            "Birthday: 1950-04-12\n" +
+                            "Gender: FEMALE\n" +
+                            "Email: overDaRiverAndThruDaWoods@gmail.com\n\n";
         String actual = Searching.printPersonsOlderThan(SocialNetwork.get(), 30);
 
         Assert.assertEquals(expected, actual);
@@ -34,6 +37,25 @@ public class SearchingTest {
 
     @Test
     public void printPersonsWithinAgeRangeTest() {
+        String expected =   "Name: Red\n" +
+                            "Birthday: 2010-07-21\n" +
+                            "Gender: FEMALE\n" +
+                            "Email: red.riding@gmail.com\n\n";
+        String actual = Searching.printPersonsWithinAgeRange(SocialNetwork.get(), 5, 30);
 
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void printPersonsTest() {
+        AgeTester ageTester = new AgeTester();
+
+        String expected =   "Name: Grandma\n" +
+                            "Birthday: 1950-04-12\n" +
+                            "Gender: FEMALE\n" +
+                            "Email: overDaRiverAndThruDaWoods@gmail.com\n\n";
+        String actual = Searching.printPersons(SocialNetwork.get(), ageTester);
+
+        Assert.assertEquals(expected, actual);
     }
 }
